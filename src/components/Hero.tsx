@@ -50,30 +50,12 @@ const Hero: React.FC = () => {
             </div>
           </div>
           
-          {/* Floating product visuals */}
+          {/* Placeholder geometric shapes instead of floating product visuals */}
           <div className="mt-16 relative h-64 md:h-96">
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 opacity-90 animate-float">
-              <div className="rounded-lg overflow-hidden shadow-[0_0_30px_rgba(127,90,240,0.5)]">
-                <img 
-                  src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&w=500" 
-                  alt="Cyberpunk product visual" 
-                  className="w-64 h-40 md:w-96 md:h-64 object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -right-6 rounded-lg overflow-hidden shadow-[0_0_30px_rgba(22,224,189,0.5)]" style={{ animationDelay: "1.5s" }}>
-                <img 
-                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&w=400" 
-                  alt="Product design visual" 
-                  className="w-40 h-24 md:w-64 md:h-40 object-cover floating"
-                />
-              </div>
-              <div className="absolute -top-6 -left-6 rounded-lg overflow-hidden shadow-[0_0_30px_rgba(238,62,201,0.5)]" style={{ animationDelay: "0.8s" }}>
-                <img 
-                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&w=400" 
-                  alt="Tech product visual" 
-                  className="w-32 h-20 md:w-48 md:h-32 object-cover floating"
-                />
-              </div>
+              <div className="w-64 h-40 md:w-96 md:h-64 rounded-lg bg-cyber-purple/20 border border-cyber-purple/40 shadow-[0_0_30px_rgba(127,90,240,0.5)]"></div>
+              <div className="absolute -bottom-6 -right-6 w-40 h-24 md:w-64 md:h-40 rounded-lg bg-cyber-teal/20 border border-cyber-teal/40 shadow-[0_0_30px_rgba(22,224,189,0.5)] floating" style={{ animationDelay: "1.5s" }}></div>
+              <div className="absolute -top-6 -left-6 w-32 h-20 md:w-48 md:h-32 rounded-lg bg-cyber-magenta/20 border border-cyber-magenta/40 shadow-[0_0_30px_rgba(238,62,201,0.5)] floating" style={{ animationDelay: "0.8s" }}></div>
             </div>
           </div>
         </div>

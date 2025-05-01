@@ -6,20 +6,17 @@ const Testimonials: React.FC = () => {
     {
       quote: "Product Photography Designer GPT has been a game-changer for our e-commerce business. We've increased conversion rates by 36% since upgrading our product visuals with this tool.",
       author: "Alex Chen",
-      position: "E-commerce Store Owner",
-      image: "https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?auto=format&w=200"
+      position: "E-commerce Store Owner"
     },
     {
       quote: "As a freelance marketer, this tool has allowed me to deliver professional-grade product visuals to my clients without hiring a photography team. The results are truly outstanding.",
       author: "Sarah Johnson",
-      position: "Digital Marketing Consultant",
-      image: "https://images.unsplash.com/photo-1486718448742-163732cd1544?auto=format&w=200"
+      position: "Digital Marketing Consultant"
     },
     {
       quote: "We used to spend $2,000+ per product photoshoot. Now we upload a few basic photos and get better results in minutes. The ROI is incredible.",
       author: "Michael Torres",
-      position: "Brand Manager, Consumer Electronics",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&w=200"
+      position: "Brand Manager, Consumer Electronics"
     }
   ];
 
@@ -49,12 +46,8 @@ const Testimonials: React.FC = () => {
               </div>
 
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full overflow-hidden mr-4 border border-cyber-purple/30">
-                  <img 
-                    src={testimonial.image} 
-                    alt={testimonial.author} 
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-12 h-12 rounded-full overflow-hidden mr-4 border border-cyber-purple/30 bg-cyber-dark-purple flex items-center justify-center">
+                  <span className="text-xl text-cyber-text">{testimonial.author.charAt(0)}</span>
                 </div>
                 <div>
                   <p className="font-medium text-cyber-text">{testimonial.author}</p>
