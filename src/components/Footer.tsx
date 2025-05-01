@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Logo from './Logo';
+import { Button } from './ui/button';
 
 const Footer: React.FC = () => {
   const navLinks = [
@@ -24,7 +25,10 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-cyber-dark py-12 border-t border-cyber-purple/20">
+    <footer 
+      className="bg-cyber-dark py-12 border-t border-cyber-purple/20 relative z-20"
+      style={{ position: 'relative', zIndex: 10 }}
+    >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and tagline */}
@@ -45,10 +49,10 @@ const Footer: React.FC = () => {
                     href={link.url}
                     target={link.url.startsWith('http') ? "_blank" : undefined}
                     rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
-                    className="text-cyber-text/70 hover:text-cyber-teal transition-colors w-full inline-block py-3 px-2"
+                    className="text-cyber-text/70 hover:text-cyber-teal transition-colors w-full block py-3 px-4 cursor-pointer"
                     onClick={(e) => console.log(`Link clicked: ${link.name}`)}
                   >
-                    {link.name}
+                    <div className="w-full h-full">{link.name}</div>
                   </a>
                 </li>
               ))}
@@ -64,10 +68,10 @@ const Footer: React.FC = () => {
                   href="https://openai.com/policies/privacy-policy/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors w-full inline-block py-3 px-2"
+                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors w-full block py-3 px-4 cursor-pointer"
                   onClick={(e) => console.log("Privacy Policy clicked")}
                 >
-                  Privacy Policy
+                  <div className="w-full h-full">Privacy Policy</div>
                 </a>
               </li>
               <li className="w-full">
@@ -75,10 +79,10 @@ const Footer: React.FC = () => {
                   href="https://aiwebtools.ai/terms-of-services" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors w-full inline-block py-3 px-2"
+                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors w-full block py-3 px-4 cursor-pointer"
                   onClick={(e) => console.log("Terms of Service clicked")}
                 >
-                  Terms of Service
+                  <div className="w-full h-full">Terms of Service</div>
                 </a>
               </li>
             </ul>
@@ -91,19 +95,19 @@ const Footer: React.FC = () => {
               <li className="w-full">
                 <a 
                   href="tel:+14758008096" 
-                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors w-full inline-block py-3 px-2"
+                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors w-full block py-3 px-4 cursor-pointer"
                   onClick={(e) => console.log("Phone number clicked")}
                 >
-                  (475) 800-8096
+                  <div className="w-full h-full">(475) 800-8096</div>
                 </a>
               </li>
               <li className="w-full">
                 <a 
                   href="mailto:Contact@ai-webtools.com" 
-                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors w-full inline-block py-3 px-2"
+                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors w-full block py-3 px-4 cursor-pointer"
                   onClick={(e) => console.log("Email clicked")}
                 >
-                  Contact@ai-webtools.com
+                  <div className="w-full h-full">Contact@ai-webtools.com</div>
                 </a>
               </li>
             </ul>
@@ -116,7 +120,7 @@ const Footer: React.FC = () => {
               href="https://www.aiwebtools.ai" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-cyber-text/70 hover:text-cyber-purple transition-colors py-2 px-3 inline-block"
+              className="text-cyber-text/70 hover:text-cyber-purple transition-colors py-2 px-3 inline-block cursor-pointer"
               onClick={(e) => console.log("Copyright link clicked")}
             >
               © 2025 AI WEB TOOLS LLC All rights reserved.
@@ -125,15 +129,15 @@ const Footer: React.FC = () => {
           
           {/* More AI Tools button */}
           <div className="mt-4 md:mt-0">
-            <a 
-              href="https://www.aiwebtools.ai" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-block px-6 py-2 bg-cyber-dark rounded-full border border-cyber-purple/50 text-cyber-text hover:bg-cyber-purple/10 transition-all duration-300 shadow-[0_0_10px_rgba(127,90,240,0.3)]"
-              onClick={(e) => console.log("More AI Tools button clicked")}
+            <Button
+              onClick={() => {
+                console.log("More AI Tools button clicked");
+                window.open("https://www.aiwebtools.ai", "_blank", "noopener,noreferrer");
+              }}
+              className="inline-block px-6 py-2 bg-cyber-dark rounded-full border border-cyber-purple/50 text-cyber-text hover:bg-cyber-purple/10 transition-all duration-300 shadow-[0_0_10px_rgba(127,90,240,0.3)] cursor-pointer z-20"
             >
               More AI Tools
-            </a>
+            </Button>
           </div>
         </div>
       </div>

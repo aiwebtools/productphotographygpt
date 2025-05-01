@@ -110,7 +110,8 @@ const ThreeJSBackground: React.FC = () => {
   return (
     <canvas 
       id="bg-canvas"
-      className="fixed inset-0 z-0 opacity-60"
+      className="fixed inset-0 z-0 opacity-60 pointer-events-none"
+      style={{ pointerEvents: 'none' }}
     />
   );
 };

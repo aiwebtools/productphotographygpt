@@ -15,13 +15,15 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-cyber-background text-cyber-text">
       <ThreeJSBackground />
-      <Navbar />
-      <Hero />
-      <Features />
-      <HowItWorks />
-      <Testimonials />
-      <Faq />
-      <Disclaimer />
+      <div className="relative z-10">
+        <Navbar />
+        <Hero />
+        <Features />
+        <HowItWorks />
+        <Testimonials />
+        <Faq />
+        <Disclaimer />
+      </div>
       <Footer />
       <ConsentPopup />
     </div>
