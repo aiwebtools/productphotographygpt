@@ -1,0 +1,92 @@
+
+import React, { useEffect, useState } from 'react';
+
+const Hero: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+  
+  return (
+    <div className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0 bg-cyber-radial z-0"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-cyber-background to-transparent z-0"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+              <span className="neon-text-purple">Product Photography </span>
+              <span className="neon-text-teal">Designer</span>
+              <span className="neon-text-magenta"> GPT</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl mb-8 text-cyber-text/90">
+              PRODUCT PHOTOGRAPHY DESIGN <span className="neon-text-teal">JUST BECAME FREE</span>
+            </p>
+            
+            <p className="md:text-lg mb-12 max-w-3xl mx-auto">
+              Transform your product photos into stunning, professional-grade advertising visuals with our AI-powered design assistant. Create high-end product images for ads, websites, social media, and more - for free.
+            </p>
+            
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
+              <a 
+                href="https://chatgpt.com/g/g-68135dd527dc8191b66f6fec59c6ecef-product-photography-designer-gpt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cyber-button text-center"
+              >
+                USE Product Photography Designer GPT
+              </a>
+              
+              <a 
+                href="#how-it-works"
+                className="cyber-button cyber-button-secondary text-center"
+              >
+                Learn How It Works
+              </a>
+            </div>
+          </div>
+          
+          {/* Floating product visuals */}
+          <div className="mt-16 relative h-64 md:h-96">
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 opacity-90 animate-float">
+              <div className="rounded-lg overflow-hidden shadow-[0_0_30px_rgba(127,90,240,0.5)]">
+                <img 
+                  src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&w=500" 
+                  alt="Cyberpunk product visual" 
+                  className="w-64 h-40 md:w-96 md:h-64 object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 rounded-lg overflow-hidden shadow-[0_0_30px_rgba(22,224,189,0.5)]" style={{ animationDelay: "1.5s" }}>
+                <img 
+                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&w=400" 
+                  alt="Product design visual" 
+                  className="w-40 h-24 md:w-64 md:h-40 object-cover floating"
+                />
+              </div>
+              <div className="absolute -top-6 -left-6 rounded-lg overflow-hidden shadow-[0_0_30px_rgba(238,62,201,0.5)]" style={{ animationDelay: "0.8s" }}>
+                <img 
+                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&w=400" 
+                  alt="Tech product visual" 
+                  className="w-32 h-20 md:w-48 md:h-32 object-cover floating"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Scroll down indicator */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-6 h-10 rounded-full border-2 border-cyber-purple flex justify-center pt-2">
+          <div className="w-1 h-2 bg-cyber-purple rounded-full animate-pulse-slow"></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Hero;

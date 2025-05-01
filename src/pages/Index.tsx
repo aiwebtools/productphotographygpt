@@ -1,12 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import Features from '@/components/Features';
+import HowItWorks from '@/components/HowItWorks';
+import Testimonials from '@/components/Testimonials';
+import Faq from '@/components/Faq';
+import Disclaimer from '@/components/Disclaimer';
+import Footer from '@/components/Footer';
+import ThreeJSBackground from '@/components/ThreeJSBackground';
+import ConsentPopup from '@/components/ConsentPopup';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-cyber-background text-cyber-text">
+      <ThreeJSBackground />
+      <Navbar />
+      <Hero />
+      <Features />
+      <HowItWorks />
+      <Testimonials />
+      <Faq />
+      <Disclaimer />
+      <Footer />
+      <ConsentPopup />
     </div>
   );
 };
