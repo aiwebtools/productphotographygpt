@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
                     href={link.url}
                     target={link.url.startsWith('http') ? "_blank" : undefined}
                     rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
-                    className="text-cyber-text/70 hover:text-cyber-teal transition-colors"
+                    className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-1"
                   >
                     {link.name}
                   </a>
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
                   href="https://openai.com/policies/privacy-policy/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors"
+                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-1"
                 >
                   Privacy Policy
                 </a>
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
                   href="https://aiwebtools.ai/terms-of-services" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors"
+                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-1"
                 >
                   Terms of Service
                 </a>
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
               <li>
                 <a 
                   href="tel:+14758008096" 
-                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors"
+                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-1"
                 >
                   (475) 800-8096
                 </a>
@@ -91,7 +91,7 @@ const Footer: React.FC = () => {
               <li>
                 <a 
                   href="mailto:Contact@ai-webtools.com" 
-                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors"
+                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-1"
                 >
                   Contact@ai-webtools.com
                 </a>
@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
               href="https://www.aiwebtools.ai" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-cyber-text/70 hover:text-cyber-purple transition-colors"
+              className="text-cyber-text/70 hover:text-cyber-purple transition-colors cursor-pointer"
             >
               © 2025 AI WEB TOOLS LLC All rights reserved.
             </a>
@@ -118,7 +118,7 @@ const Footer: React.FC = () => {
               href="https://www.aiwebtools.ai" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-block px-6 py-2 bg-cyber-dark rounded-full border border-cyber-purple/50 text-cyber-text hover:bg-cyber-purple/10 transition-all duration-300 shadow-[0_0_10px_rgba(127,90,240,0.3)]"
+              className="inline-block px-6 py-2 bg-cyber-dark rounded-full border border-cyber-purple/50 text-cyber-text hover:bg-cyber-purple/10 transition-all duration-300 shadow-[0_0_10px_rgba(127,90,240,0.3)] cursor-pointer"
             >
               More AI Tools
             </a>
