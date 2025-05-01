@@ -40,12 +40,13 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-medium mb-4 neon-text-teal">Quick Links</h3>
             <ul className="space-y-2">
               {navLinks.map((link, index) => (
-                <li key={index}>
+                <li key={index} className="w-full">
                   <a
                     href={link.url}
                     target={link.url.startsWith('http') ? "_blank" : undefined}
                     rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
-                    className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-2 px-1"
+                    className="text-cyber-text/70 hover:text-cyber-teal transition-colors w-full inline-block py-3 px-2"
+                    onClick={(e) => console.log(`Link clicked: ${link.name}`)}
                   >
                     {link.name}
                   </a>
@@ -58,22 +59,24 @@ const Footer: React.FC = () => {
           <div className="md:col-span-1">
             <h3 className="text-lg font-medium mb-4 neon-text-teal">Legal</h3>
             <ul className="space-y-2">
-              <li>
+              <li className="w-full">
                 <a 
                   href="https://openai.com/policies/privacy-policy/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-2 px-1"
+                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors w-full inline-block py-3 px-2"
+                  onClick={(e) => console.log("Privacy Policy clicked")}
                 >
                   Privacy Policy
                 </a>
               </li>
-              <li>
+              <li className="w-full">
                 <a 
                   href="https://aiwebtools.ai/terms-of-services" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-2 px-1"
+                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors w-full inline-block py-3 px-2"
+                  onClick={(e) => console.log("Terms of Service clicked")}
                 >
                   Terms of Service
                 </a>
@@ -85,18 +88,20 @@ const Footer: React.FC = () => {
           <div className="md:col-span-1">
             <h3 className="text-lg font-medium mb-4 neon-text-teal">Contact Us</h3>
             <ul className="space-y-2">
-              <li>
+              <li className="w-full">
                 <a 
                   href="tel:+14758008096" 
-                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-2 px-1"
+                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors w-full inline-block py-3 px-2"
+                  onClick={(e) => console.log("Phone number clicked")}
                 >
                   (475) 800-8096
                 </a>
               </li>
-              <li>
+              <li className="w-full">
                 <a 
                   href="mailto:Contact@ai-webtools.com" 
-                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-2 px-1"
+                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors w-full inline-block py-3 px-2"
+                  onClick={(e) => console.log("Email clicked")}
                 >
                   Contact@ai-webtools.com
                 </a>
@@ -111,19 +116,21 @@ const Footer: React.FC = () => {
               href="https://www.aiwebtools.ai" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-cyber-text/70 hover:text-cyber-purple transition-colors cursor-pointer"
+              className="text-cyber-text/70 hover:text-cyber-purple transition-colors py-2 px-3 inline-block"
+              onClick={(e) => console.log("Copyright link clicked")}
             >
               © 2025 AI WEB TOOLS LLC All rights reserved.
             </a>
           </div>
           
-          {/* More AI Tools oval button */}
+          {/* More AI Tools button */}
           <div className="mt-4 md:mt-0">
             <a 
               href="https://www.aiwebtools.ai" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-block px-6 py-2 bg-cyber-dark rounded-full border border-cyber-purple/50 text-cyber-text hover:bg-cyber-purple/10 transition-all duration-300 shadow-[0_0_10px_rgba(127,90,240,0.3)] cursor-pointer"
+              className="inline-block px-6 py-2 bg-cyber-dark rounded-full border border-cyber-purple/50 text-cyber-text hover:bg-cyber-purple/10 transition-all duration-300 shadow-[0_0_10px_rgba(127,90,240,0.3)]"
+              onClick={(e) => console.log("More AI Tools button clicked")}
             >
               More AI Tools
             </a>
