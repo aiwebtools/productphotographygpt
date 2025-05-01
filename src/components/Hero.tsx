@@ -49,15 +49,6 @@ const Hero: React.FC = () => {
               </a>
             </div>
           </div>
-          
-          {/* Placeholder geometric shapes instead of floating product visuals */}
-          <div className="mt-16 relative h-64 md:h-96">
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 opacity-90 animate-float">
-              <div className="w-64 h-40 md:w-96 md:h-64 rounded-lg bg-cyber-purple/20 border border-cyber-purple/40 shadow-[0_0_30px_rgba(127,90,240,0.5)]"></div>
-              <div className="absolute -bottom-6 -right-6 w-40 h-24 md:w-64 md:h-40 rounded-lg bg-cyber-teal/20 border border-cyber-teal/40 shadow-[0_0_30px_rgba(22,224,189,0.5)] floating" style={{ animationDelay: "1.5s" }}></div>
-              <div className="absolute -top-6 -left-6 w-32 h-20 md:w-48 md:h-32 rounded-lg bg-cyber-magenta/20 border border-cyber-magenta/40 shadow-[0_0_30px_rgba(238,62,201,0.5)] floating" style={{ animationDelay: "0.8s" }}></div>
-            </div>
-          </div>
         </div>
       </div>
       
