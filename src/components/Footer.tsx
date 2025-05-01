@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
             </p>
           </div>
           
-          {/* Links */}
+          {/* Quick Links */}
           <div className="md:col-span-1">
             <h3 className="text-lg font-medium mb-4 neon-text-teal">Quick Links</h3>
             <ul className="space-y-2">
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
                     href={link.url}
                     target={link.url.startsWith('http') ? "_blank" : undefined}
                     rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
-                    className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-1"
+                    className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-2 px-1"
                   >
                     {link.name}
                   </a>
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
                   href="https://openai.com/policies/privacy-policy/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-1"
+                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-2 px-1"
                 >
                   Privacy Policy
                 </a>
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
                   href="https://aiwebtools.ai/terms-of-services" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-1"
+                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-2 px-1"
                 >
                   Terms of Service
                 </a>
@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
               <li>
                 <a 
                   href="tel:+14758008096" 
-                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-1"
+                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-2 px-1"
                 >
                   (475) 800-8096
                 </a>
@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
               <li>
                 <a 
                   href="mailto:Contact@ai-webtools.com" 
-                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-1"
+                  className="text-cyber-text/70 hover:text-cyber-teal transition-colors cursor-pointer block py-2 px-1"
                 >
                   Contact@ai-webtools.com
                 </a>
