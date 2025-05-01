@@ -26,7 +26,11 @@ const Navbar: React.FC = () => {
       url: "https://chatgpt.com/g/g-68135dd527dc8191b66f6fec59c6ecef-product-photography-designer-gpt",
       isPrimary: true,
     },
-    { name: "FAQ", url: "#faq", isPrimary: false },
+    { 
+      name: "AD AND LOGO DESIGN GPT", 
+      url: "https://adandlogomakergpt.lovable.app/?via=aiwebtools", 
+      isPrimary: false 
+    },
     { name: "Disclaimer", url: "#disclaimer", isPrimary: false },
     { name: "More AI Tools", url: "https://www.aiwebtools.ai", isPrimary: false },
   ];
