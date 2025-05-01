@@ -14,6 +14,11 @@ const Footer: React.FC = () => {
       url: "https://adandlogomakergpt.lovable.app/?via=aiwebtools", 
       isPrimary: false 
     },
+    { 
+      name: "GRAPHIC & COVER DESIGNER GPT", 
+      url: "https://graphicdesigngpt.lovable.app/?via=aiwebtools", 
+      isPrimary: false 
+    },
     { name: "Disclaimer", url: "#disclaimer", isPrimary: false },
     { name: "More AI Tools", url: "https://www.aiwebtools.ai", isPrimary: false },
   ];
