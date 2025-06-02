@@ -10,6 +10,14 @@ const ThreeJSBackground: React.FC = () => {
       const ctx = canvas.getContext('2d');
       if (!ctx) return;
       
+      // Helper function to convert hex to rgba
+      const hexToRgba = (hex: string, alpha: number = 1): string => {
+        const r = parseInt(hex.slice(1, 3), 16);
+        const g = parseInt(hex.slice(3, 5), 16);
+        const b = parseInt(hex.slice(5, 7), 16);
+        return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+      };
+      
       // Match canvas size to window
       const resizeCanvas = () => {
         canvas.width = window.innerWidth;
@@ -153,9 +161,9 @@ const ThreeJSBackground: React.FC = () => {
             orb.x, orb.y, 0,
             orb.x, orb.y, pulsedSize
           );
-          orbGradient.addColorStop(0, orb.color.replace(')', `, ${pulsedOpacity * 0.8})`).replace('#', 'rgba(').replace(/(.{2})(.{2})(.{2})/, '$1, $2, $3'));
-          orbGradient.addColorStop(0.5, orb.color.replace(')', `, ${pulsedOpacity * 0.4})`).replace('#', 'rgba(').replace(/(.{2})(.{2})(.{2})/, '$1, $2, $3'));
-          orbGradient.addColorStop(1, orb.color.replace(')', ', 0)').replace('#', 'rgba(').replace(/(.{2})(.{2})(.{2})/, '$1, $2, $3'));
+          orbGradient.addColorStop(0, hexToRgba(orb.color, pulsedOpacity * 0.8));
+          orbGradient.addColorStop(0.5, hexToRgba(orb.color, pulsedOpacity * 0.4));
+          orbGradient.addColorStop(1, hexToRgba(orb.color, 0));
           
           ctx.fillStyle = orbGradient;
           ctx.beginPath();
@@ -190,7 +198,7 @@ const ThreeJSBackground: React.FC = () => {
             ctx.shadowColor = particle.color;
             ctx.beginPath();
             ctx.arc(point.x, point.y, trailSize, 0, Math.PI * 2);
-            ctx.fillStyle = particle.color.replace(')', `, ${trailOpacity})`).replace('#', 'rgba(').replace(/(.{2})(.{2})(.{2})/, '$1, $2, $3');
+            ctx.fillStyle = hexToRgba(particle.color, trailOpacity);
             ctx.fill();
           });
           
@@ -228,8 +236,8 @@ const ThreeJSBackground: React.FC = () => {
                 particle.x, particle.y,
                 otherParticle.x, otherParticle.y
               );
-              gradient.addColorStop(0, particle.color.replace(')', `, ${opacity})`).replace('#', 'rgba(').replace(/(.{2})(.{2})(.{2})/, '$1, $2, $3'));
-              gradient.addColorStop(1, otherParticle.color.replace(')', `, ${opacity})`).replace('#', 'rgba(').replace(/(.{2})(.{2})(.{2})/, '$1, $2, $3'));
+              gradient.addColorStop(0, hexToRgba(particle.color, opacity));
+              gradient.addColorStop(1, hexToRgba(otherParticle.color, opacity));
               
               ctx.strokeStyle = gradient;
               ctx.lineWidth = 1;
