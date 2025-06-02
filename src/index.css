@@ -84,7 +84,7 @@
   body {
     @apply bg-cyber-background font-sans overflow-x-hidden;
     color: #ffffff; /* Darker text base */
-    background: linear-gradient(135deg, #0F0E17 0%, #1a1625 25%, #0F0E17 50%, #1a1625 75%, #0F0E17 100%);
+    background: linear-gradient(135deg, #0A090F 0%, #12101A 25%, #0A090F 50%, #12101A 75%, #0A090F 100%);
     background-size: 400% 400%;
     animation: divineGradient 20s ease infinite;
   }
