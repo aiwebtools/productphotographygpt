@@ -17,18 +17,19 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            {/* SEO-optimized heading with target keywords */}
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-              <span className="neon-text-purple">Product Photography </span>
+              <span className="neon-text-purple">Free AI Tools - Product Photography </span>
               <span className="neon-text-teal">Designer</span>
               <span className="neon-text-magenta"> GPT</span>
             </h1>
             
-            <p className="text-xl md:text-2xl mb-8 text-cyber-text/90">
-              PRODUCT PHOTOGRAPHY DESIGN <span className="neon-text-teal">JUST BECAME FREE</span>
-            </p>
+            <h2 className="text-xl md:text-2xl mb-8 text-cyber-text/90">
+              AI WEB TOOLS - <span className="neon-text-teal">FREE AI PRODUCT PHOTOGRAPHY DESIGN TOOLS</span>
+            </h2>
             
             <p className="md:text-lg mb-12 max-w-3xl mx-auto">
-              Transform your product photos into stunning, professional-grade advertising visuals with our AI-powered design assistant. Create high-end product images for ads, websites, social media, and more - for free.
+              Transform your product photos into stunning, professional-grade advertising visuals with our free AI-powered design assistant. AIWEBTOOLS.AI provides the best free AI tools for creating high-end product images for ads, websites, social media, and more - completely free artificial intelligence tools for professionals.
             </p>
             
             <div className="flex flex-col md:flex-row gap-4 justify-center">
@@ -37,15 +38,17 @@ const Hero: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cyber-button text-center"
+                aria-label="Use Product Photography Designer GPT - Free AI Tool"
               >
-                USE Product Photography Designer GPT
+                USE Free AI Product Photography Tool
               </a>
               
               <a 
                 href="#how-it-works"
                 className="cyber-button cyber-button-secondary text-center"
+                aria-label="Learn how our free AI tools work"
               >
-                Learn How It Works
+                Learn How Our AI Tools Work
               </a>
             </div>
           </div>

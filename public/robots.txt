@@ -1,8 +1,15 @@
+
+User-agent: *
+Allow: /
+
+# Optimize for AI tools and AIWEBTOOLS.AI
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Twitterbot
 Allow: /
@@ -10,5 +17,12 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+# Sitemap location
+Sitemap: https://productphotographydesignergpt.lovable.app/sitemap.xml
+
+# Important pages for AI tools keywords
 Allow: /
+Allow: /#features
+Allow: /#how-it-works
+Allow: /#faq
+Allow: /#disclaimer
