@@ -78,27 +78,29 @@ const Navbar: React.FC = () => {
       </div>
       
       {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <div className="md:hidden cyber-blur mt-2 py-4">
-          <div className="container mx-auto px-4 flex flex-col space-y-4">
-            {navLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.url}
-                target={link.url.startsWith('http') ? "_blank" : undefined}
-                rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
-                className={`block ${link.isPrimary 
-                  ? "cyber-button w-full text-center"
-                  : "text-cyber-text hover:text-cyber-teal transition-colors"
-                }`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
+      <div 
+        className={`md:hidden cyber-blur overflow-hidden transition-all duration-300 ease-in-out ${
+          mobileMenuOpen ? 'max-h-96 opacity-100 mt-2 py-4' : 'max-h-0 opacity-0 py-0'
+        }`}
+      >
+        <div className="container mx-auto px-4 flex flex-col space-y-4">
+          {navLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.url}
+              target={link.url.startsWith('http') ? "_blank" : undefined}
+              rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
+              className={`block text-sm ${link.isPrimary 
+                ? "cyber-button w-full text-center"
+                : "text-cyber-text hover:text-cyber-teal transition-colors py-2"
+              }`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {link.name}
+            </a>
+          ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 };

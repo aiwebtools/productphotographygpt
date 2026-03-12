@@ -132,7 +132,7 @@ const Footer: React.FC = () => {
             <Button
               onClick={() => {
                 console.log("More AI Tools button clicked");
-                window.open("https://www.aiwebtools.ai", "_blank", "noopener,noreferrer");
+                window.open("https://aiwebtools.lovable.app/?via=aiwebtools", "_blank", "noopener,noreferrer");
               }}
               className="inline-block px-6 py-2 bg-cyber-dark rounded-full border border-cyber-purple/50 text-cyber-text hover:bg-cyber-purple/10 transition-all duration-300 shadow-[0_0_10px_rgba(127,90,240,0.3)] cursor-pointer z-20"
             >

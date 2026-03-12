@@ -16,7 +16,7 @@ const Logo: React.FC = () => {
           Product Photography Designer GPT
         </span>
         <span className="text-xs text-cyber-text/70">
-          Presented by <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-teal transition-colors">AiWebTools.Ai</a>
+          Presented by <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-teal transition-colors">AiWebTools.Ai</a>
         </span>
       </div>
     </div>
