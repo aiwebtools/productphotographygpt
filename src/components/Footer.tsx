@@ -117,7 +117,7 @@ const Footer: React.FC = () => {
         <div className="mt-12 pt-6 border-t border-cyber-purple/20 flex flex-col md:flex-row justify-between items-center">
           <div>
             <a 
-              href="https://www.aiwebtools.ai" 
+              href="https://aiwebtools.lovable.app/?via=aiwebtools" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-cyber-text/70 hover:text-cyber-purple transition-colors py-2 px-3 inline-block cursor-pointer"
