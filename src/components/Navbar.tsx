@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
       url: "https://graphicdesigngpt.lovable.app/?via=aiwebtools", 
       isPrimary: false 
     },
-    { name: "More AI Tools", url: "https://www.aiwebtools.ai", isPrimary: false },
+    { name: "More AI Tools", url: "https://aiwebtools.lovable.app/?via=aiwebtools", isPrimary: false },
   ];
 
   return (
