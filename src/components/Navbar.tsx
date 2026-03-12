@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
       url: "https://graphicdesigngpt.lovable.app/?via=aiwebtools", 
       isPrimary: false 
     },
-    { name: "More AI Tools", url: "https://www.aiwebtools.ai", isPrimary: false },
+    { name: "More AI Tools", url: "https://aiwebtools.lovable.app/?via=aiwebtools", isPrimary: false },
   ];
 
   return (
@@ -50,17 +50,17 @@ const Navbar: React.FC = () => {
           <Logo />
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
             {navLinks.map((link, index) => (
               <a
                 key={index}
                 href={link.url}
                 target={link.url.startsWith('http') ? "_blank" : undefined}
                 rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
-                className={link.isPrimary 
-                  ? "cyber-button"
+                className={`text-sm whitespace-nowrap ${link.isPrimary 
+                  ? "cyber-button text-xs xl:text-sm px-3 xl:px-6 py-2 xl:py-3"
                   : "text-cyber-text hover:text-cyber-teal transition-colors"
-                }
+                }`}
               >
                 {link.name}
               </a>
@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
           
           {/* Mobile menu button */}
           <button 
-            className="md:hidden text-cyber-text hover:text-cyber-purple transition-colors"
+            className="lg:hidden text-cyber-text hover:text-cyber-purple transition-colors p-2 -mr-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -78,27 +78,29 @@ const Navbar: React.FC = () => {
       </div>
       
       {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <div className="md:hidden cyber-blur mt-2 py-4">
-          <div className="container mx-auto px-4 flex flex-col space-y-4">
-            {navLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.url}
-                target={link.url.startsWith('http') ? "_blank" : undefined}
-                rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
-                className={`block ${link.isPrimary 
-                  ? "cyber-button w-full text-center"
-                  : "text-cyber-text hover:text-cyber-teal transition-colors"
-                }`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
+      <div 
+        className={`lg:hidden cyber-blur overflow-hidden transition-all duration-300 ease-in-out ${
+          mobileMenuOpen ? 'max-h-96 opacity-100 mt-2 py-4' : 'max-h-0 opacity-0 py-0'
+        }`}
+      >
+        <div className="container mx-auto px-4 flex flex-col space-y-4">
+          {navLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.url}
+              target={link.url.startsWith('http') ? "_blank" : undefined}
+              rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
+              className={`block text-sm ${link.isPrimary 
+                ? "cyber-button w-full text-center"
+                : "text-cyber-text hover:text-cyber-teal transition-colors py-2"
+              }`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {link.name}
+            </a>
+          ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 };

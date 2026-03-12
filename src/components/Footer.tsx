@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
       isPrimary: false 
     },
     { name: "Disclaimer", url: "#disclaimer", isPrimary: false },
-    { name: "More AI Tools", url: "https://www.aiwebtools.ai", isPrimary: false },
+    { name: "More AI Tools", url: "https://aiwebtools.lovable.app/?via=aiwebtools", isPrimary: false },
   ];
 
   return (
@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="w-full">
                 <a 
-                  href="https://aiwebtools.ai/terms-of-services" 
+                  href="https://aiwebtools.lovable.app/terms-of-services?via=aiwebtools" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-cyber-text/70 hover:text-cyber-teal transition-colors w-full block py-3 px-4 cursor-pointer"
@@ -117,7 +117,7 @@ const Footer: React.FC = () => {
         <div className="mt-12 pt-6 border-t border-cyber-purple/20 flex flex-col md:flex-row justify-between items-center">
           <div>
             <a 
-              href="https://www.aiwebtools.ai" 
+              href="https://aiwebtools.lovable.app/?via=aiwebtools" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-cyber-text/70 hover:text-cyber-purple transition-colors py-2 px-3 inline-block cursor-pointer"
@@ -132,7 +132,7 @@ const Footer: React.FC = () => {
             <Button
               onClick={() => {
                 console.log("More AI Tools button clicked");
-                window.open("https://www.aiwebtools.ai", "_blank", "noopener,noreferrer");
+                window.open("https://aiwebtools.lovable.app/?via=aiwebtools", "_blank", "noopener,noreferrer");
               }}
               className="inline-block px-6 py-2 bg-cyber-dark rounded-full border border-cyber-purple/50 text-cyber-text hover:bg-cyber-purple/10 transition-all duration-300 shadow-[0_0_10px_rgba(127,90,240,0.3)] cursor-pointer z-20"
             >
