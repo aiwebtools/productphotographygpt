@@ -57,10 +57,10 @@ const Navbar: React.FC = () => {
                 href={link.url}
                 target={link.url.startsWith('http') ? "_blank" : undefined}
                 rel={link.url.startsWith('http') ? "noopener noreferrer" : undefined}
-                className={link.isPrimary 
-                  ? "cyber-button"
+                className={`text-sm whitespace-nowrap ${link.isPrimary 
+                  ? "cyber-button text-xs xl:text-sm px-3 xl:px-6 py-2 xl:py-3"
                   : "text-cyber-text hover:text-cyber-teal transition-colors"
-                }
+                }`}
               >
                 {link.name}
               </a>
