@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
           <Logo />
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
             {navLinks.map((link, index) => (
               <a
                 key={index}
