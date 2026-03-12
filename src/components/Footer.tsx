@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="w-full">
                 <a 
-                  href="https://aiwebtools.ai/terms-of-services" 
+                  href="https://aiwebtools.lovable.app/terms-of-services?via=aiwebtools" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-cyber-text/70 hover:text-cyber-teal transition-colors w-full block py-3 px-4 cursor-pointer"
