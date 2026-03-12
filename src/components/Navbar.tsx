@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
       
       {/* Mobile Navigation */}
       <div 
-        className={`md:hidden cyber-blur overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`lg:hidden cyber-blur overflow-hidden transition-all duration-300 ease-in-out ${
           mobileMenuOpen ? 'max-h-96 opacity-100 mt-2 py-4' : 'max-h-0 opacity-0 py-0'
         }`}
       >
