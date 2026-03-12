@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
           
           {/* Mobile menu button */}
           <button 
-            className="md:hidden text-cyber-text hover:text-cyber-purple transition-colors"
+            className="lg:hidden text-cyber-text hover:text-cyber-purple transition-colors p-2 -mr-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
