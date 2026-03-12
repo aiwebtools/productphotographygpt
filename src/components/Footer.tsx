@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
       isPrimary: false 
     },
     { name: "Disclaimer", url: "#disclaimer", isPrimary: false },
-    { name: "More AI Tools", url: "https://www.aiwebtools.ai", isPrimary: false },
+    { name: "More AI Tools", url: "https://aiwebtools.lovable.app/?via=aiwebtools", isPrimary: false },
   ];
 
   return (
